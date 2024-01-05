@@ -8,10 +8,10 @@ using RAPC9Y__SOF__2023241.Data;
 
 #nullable disable
 
-namespace RAPC9Y__SOF__2023241.Data.Migrations
+namespace RAPC9Y__SOF__2023241.Migrations
 {
     [DbContext(typeof(LoLDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    partial class LoLDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -1976,6 +1976,14 @@ namespace RAPC9Y__SOF__2023241.Data.Migrations
             modelBuilder.Entity("RAPC9Y_SOF_2023241.MVC.Models.SiteUser", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasDiscriminator().HasValue("SiteUser");
                 });

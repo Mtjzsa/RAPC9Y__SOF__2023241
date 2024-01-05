@@ -9,11 +9,11 @@ using RAPC9Y__SOF__2023241.Data;
 
 #nullable disable
 
-namespace RAPC9Y__SOF__2023241.Data.Migrations
+namespace RAPC9Y__SOF__2023241.Migrations
 {
     [DbContext(typeof(LoLDbContext))]
-    [Migration("20240105145401_init")]
-    partial class init
+    [Migration("20240105151432_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -1978,6 +1978,14 @@ namespace RAPC9Y__SOF__2023241.Data.Migrations
             modelBuilder.Entity("RAPC9Y_SOF_2023241.MVC.Models.SiteUser", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasDiscriminator().HasValue("SiteUser");
                 });
