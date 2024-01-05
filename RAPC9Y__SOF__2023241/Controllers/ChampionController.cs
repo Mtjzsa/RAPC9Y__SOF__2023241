@@ -53,17 +53,15 @@ namespace RAPC9Y_SOF_2023241.MVC.Controllers
             return View(uh);
         }
 
-        public IActionResult Update(UpdateHelper item, IFormFile picturedata)
+        public IActionResult Update(UpdateHelper item, IFormFile file)
         {
-            using (var stream = picturedata.OpenReadStream())
+            using (var stream = file.OpenReadStream())
             {
-                byte[] buffer = new byte[picturedata.Length];
-                stream.Read(buffer, 0, (int)picturedata.Length);
-                string filename = item.Champ.Id + "." + picturedata.FileName.Split('.')[1];
-                //item.Champ.ImageFileName = filename;
-                //System.IO.File.WriteAllBytes(Path.Combine("wwwroot", "images", filename), buffer);
+                byte[] buffer = new byte[file.Length];
+                stream.Read(buffer, 0, (int)file.Length);
+                string filename = item.Champ.Id + "." + file.FileName.Split('.')[1];
                 item.Champ.Data = buffer;
-                item.Champ.ContentType = picturedata.ContentType;
+                item.Champ.ContentType = file.ContentType;
             }
             if (!ModelState.IsValid)
             {
