@@ -17,8 +17,15 @@ builder.Services.AddDbContext<LoLDbContext>(opt =>
 });
 
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<LoLDbContext>();
+builder.Services.AddDefaultIdentity<IdentityUser>(options => 
+{
+    options.SignIn.RequireConfirmedAccount = false;
+    options.Password.RequireDigit = false;
+    options.Password.RequiredLength = 4;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+
+}).AddEntityFrameworkStores<LoLDbContext>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
