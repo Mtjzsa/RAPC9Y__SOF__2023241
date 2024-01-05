@@ -4,7 +4,7 @@
 
 namespace RAPC9Y__SOF__2023241.Data.Migrations
 {
-    public partial class init2 : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
