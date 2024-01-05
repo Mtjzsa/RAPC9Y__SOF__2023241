@@ -12,7 +12,7 @@ builder.Services.AddTransient<ILoLRepository, LoLRepository>();
 builder.Services.AddDbContext<LoLDbContext>(opt =>
 {
     opt
-   .UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=LeagueOfLegends_Db;Trusted_Connection=True;MultipleActiveResultSets=true")
+   .UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=League_Db;Trusted_Connection=True;MultipleActiveResultSets=true")
    .UseLazyLoadingProxies();
 });
 

@@ -12,7 +12,7 @@ using RAPC9Y__SOF__2023241.Data;
 namespace RAPC9Y__SOF__2023241.Migrations
 {
     [DbContext(typeof(LoLDbContext))]
-    [Migration("20240105151432_Initial")]
+    [Migration("20240105151934_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
