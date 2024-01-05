@@ -152,7 +152,7 @@ namespace RAPC9Y__SOF__2023241.Data
                 new Champion() { Id = "120", Name = "Swain", Gender = "Male", Species = "Magically Altered", Resources = "Mana", RegionId = 6, Release = 2010 },
                 new Champion() { Id = "121", Name = "Sylas", Gender = "Male", Species = "Human", Resources = "Mana", RegionId = 3, Release = 2019 },
                 new Champion() { Id = "122", Name = "Syndra", Gender = "Female", Species = "Human", Resources = "Mana", RegionId = 4, Release = 2012 },
-                new Champion() { Id = "123", Name = "Tahm Kech", Gender = "Male", Species = "Demon", Resources = "Mana", RegionId = 2, Release = 2015 },
+                new Champion() { Id = "123", Name = "Tahm Kench", Gender = "Male", Species = "Demon", Resources = "Mana", RegionId = 2, Release = 2015 },
                 new Champion() { Id = "124", Name = "Taliyah", Gender = "Female", Species = "Human", Resources = "Mana", RegionId = 10, Release = 2016 },
                 new Champion() { Id = "125", Name = "Talon", Gender = "Male", Species = "Human", Resources = "Mana", RegionId = 6, Release = 2011 },
                 new Champion() { Id = "126", Name = "Taric", Gender = "Male", Species = "Human", Resources = "Mana", RegionId = 11, Release = 2009 },

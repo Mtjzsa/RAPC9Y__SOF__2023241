@@ -84,7 +84,7 @@ namespace RAPC9Y_SOF_2023241.MVC.Controllers
             {
                 return BadRequest();
             }
-            
+
         }
 
         public IActionResult Error()
