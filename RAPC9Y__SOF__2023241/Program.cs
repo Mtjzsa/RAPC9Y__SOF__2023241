@@ -1,17 +1,24 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using RAPC9Y__SOF__2023241.Data;
+using RAPC9Y_SOF_2023241.MVC.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+builder.Services.AddTransient<ILoLRepository, LoLRepository>();
+builder.Services.AddDbContext<LoLDbContext>(opt =>
+{
+    opt
+   .UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=LeagueOfLegends_Db;Trusted_Connection=True;MultipleActiveResultSets=true")
+   .UseLazyLoadingProxies();
+});
+
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+    .AddEntityFrameworkStores<LoLDbContext>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

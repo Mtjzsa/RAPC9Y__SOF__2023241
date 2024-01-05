@@ -1,0 +1,63 @@
+﻿@using RAPC9Y_SOF_2023241.MVC.Helper
+@model UpdateHelper
+
+<h2>Update @Model.Champ.Name champion</h2>
+<div>
+    <div>
+        <form asp-action="update" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div>
+                @Html.HiddenFor(t=>t.Champ.Name)
+                <div class="form-floating">
+                    <input asp-for="Champ.Gender" class="form-control" value="@Model.Champ.Gender" />
+                    <label asp-for="Champ.Gender"></label>
+                    <span asp-validation-for="Champ.Gender" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating">
+                    <input asp-for="Champ.Species" class="form-control" value="@Model.Champ.Species" />
+                    <label asp-for="Champ.Species"></label>
+                    <span asp-validation-for="Champ.Species" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating">
+                    <input asp-for="Champ.Resources" class="form-control" value="@Model.Champ.Resources" />
+                    <label asp-for="Champ.Resources"></label>
+                    <span asp-validation-for="Champ.Resources" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating">
+                    <select name="Champ.RegionId" class="form-control">
+                        @foreach (var item in Model.Regions)
+                        {
+                            if (item.Id == Model.Champ.RegionId)
+                            {
+                                <option selected value="@item.Id">@item.RegionName</option>
+                            }
+                            <option value="@item.Id">@item.RegionName</option>
+                        }
+                    </select>
+                    <label asp-for="Champ.Region"></label>
+                    <span asp-validation-for="Champ.RegionId" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating">
+                    <input asp-for="Champ.Release" class="form-control" value="@Model.Champ.Release" />
+                    <label asp-for="Champ.Release"></label>
+                    <span asp-validation-for="Champ.Release" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <input type="file" name="picturedata" class="form-control" />
+                    <label>Picture</label>
+                </div>
+
+                <div>
+                    <input type="submit" value="Update Champion" class="form-control" />
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+

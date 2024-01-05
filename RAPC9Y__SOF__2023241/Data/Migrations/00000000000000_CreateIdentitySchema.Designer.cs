@@ -9,7 +9,7 @@ using System;
 
 namespace RAPC9Y__SOF__2023241.Data.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(LoLDbContext))]
     [Migration("00000000000000_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {
