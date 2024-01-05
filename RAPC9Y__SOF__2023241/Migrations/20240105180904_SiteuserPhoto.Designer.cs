@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RAPC9Y__SOF__2023241.Data;
 
@@ -11,9 +12,10 @@ using RAPC9Y__SOF__2023241.Data;
 namespace RAPC9Y__SOF__2023241.Migrations
 {
     [DbContext(typeof(LoLDbContext))]
-    partial class LoLDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240105180904_SiteuserPhoto")]
+    partial class SiteuserPhoto
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

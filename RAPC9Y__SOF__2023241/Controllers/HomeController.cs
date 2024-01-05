@@ -35,6 +35,12 @@ namespace RAPC9Y_SOF_2023241.MVC.Controllers
             return View();
         }
 
+        private async Task<IActionResult> GetUserImage(string userid)
+        {
+            var user = _userManager.Users.FirstOrDefault(t => t.Id == userid);
+            return new FileContentResult(user.Data, user.ContentType);
+        }
+
         public async Task<IActionResult> List()
         {
             return View(_repo.ReadAll());

@@ -7,5 +7,9 @@ namespace RAPC9Y_SOF_2023241.MVC.Models
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
+
+        public string? ContentType { get; set; }
+
+        public byte[]? Data { get; set; }
     }
 }
