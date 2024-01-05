@@ -10,11 +10,11 @@ namespace RAPC9Y_SOF_2023241.MVC.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<SiteUser> _userManager;
         private readonly ILogger<HomeController> _logger;
         private ILoLRepository _repo;
 
-        public HomeController(UserManager<IdentityUser> userManager, ILogger<HomeController> logger, ILoLRepository repo)
+        public HomeController(UserManager<SiteUser> userManager, ILogger<HomeController> logger, ILoLRepository repo)
         {
             _userManager = userManager;
             _logger = logger;
