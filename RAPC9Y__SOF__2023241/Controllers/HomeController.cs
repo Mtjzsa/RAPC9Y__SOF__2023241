@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using RAPC9Y__SOF__2023241.Models;
 using RAPC9Y_SOF_2023241.MVC.Data;
 using RAPC9Y_SOF_2023241.MVC.Models;
@@ -8,11 +10,13 @@ namespace RAPC9Y_SOF_2023241.MVC.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<HomeController> _logger;
         private ILoLRepository _repo;
 
-        public HomeController(ILogger<HomeController> logger, ILoLRepository repo)
+        public HomeController(UserManager<IdentityUser> userManager, ILogger<HomeController> logger, ILoLRepository repo)
         {
+            _userManager = userManager;
             _logger = logger;
             _repo = repo;
         }
@@ -22,8 +26,11 @@ namespace RAPC9Y_SOF_2023241.MVC.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        [Authorize]
+        public async Task<IActionResult> Privacy()
         {
+            var principal = this.User;
+            var user = await _userManager.GetUserAsync(principal);
             return View();
         }
 
