@@ -12,14 +12,38 @@ namespace RAPC9Y_SOF_2023241.MVC.Controllers
     public class HomeController : Controller
     {
         private readonly UserManager<SiteUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ILogger<HomeController> _logger;
         private ILoLRepository _repo;
 
-        public HomeController(UserManager<SiteUser> userManager, ILogger<HomeController> logger, ILoLRepository repo)
+        public HomeController(UserManager<SiteUser> userManager, RoleManager<IdentityRole> roleManager, ILogger<HomeController> logger, ILoLRepository repo)
         {
             _userManager = userManager;
+            _roleManager = roleManager;
             _logger = logger;
             _repo = repo;
+        }
+
+        public async Task<IActionResult> DelegeteAdmin()
+        {
+            var principal = this.User;
+            var user = await _userManager.GetUserAsync(principal);
+            var role = new IdentityRole()
+            {
+                Name = "Admin"
+            };
+            if (!await _roleManager.RoleExistsAsync("Admin"))
+            {
+                await _roleManager.CreateAsync(role);
+            }
+            await _userManager.AddToRoleAsync(user, "Admin");
+            return RedirectToAction("index", "home");
+        }
+
+        [Authorize(Roles = "Admin")]
+        public IActionResult Admin()
+        {
+            return View();
         }
 
         public IActionResult Index()

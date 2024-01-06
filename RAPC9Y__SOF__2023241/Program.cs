@@ -26,7 +26,9 @@ builder.Services.AddDefaultIdentity<SiteUser>(options =>
     options.Password.RequireNonAlphanumeric = false;
     options.Password.RequireUppercase = false;
 
-}).AddEntityFrameworkStores<LoLDbContext>();
+})
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<LoLDbContext>();
 
 builder.Services.AddAuthentication().AddFacebook(opt =>
 {
