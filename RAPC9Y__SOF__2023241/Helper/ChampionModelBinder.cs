@@ -13,12 +13,41 @@ namespace RAPC9Y_SOF_2023241.MVC.Helper
             }
 
             Champion champ = new Champion();
-            champ.Name = bindingContext.ValueProvider.GetValue("name").FirstValue;
-            champ.Gender = bindingContext.ValueProvider.GetValue("gender").FirstValue;
-            champ.Species = bindingContext.ValueProvider.GetValue("species").FirstValue;
-            champ.Resources = bindingContext.ValueProvider.GetValue("resources").FirstValue;
-            champ.RegionId = int.Parse(bindingContext.ValueProvider.GetValue("regionid").FirstValue);
-            champ.Release = int.Parse(bindingContext.ValueProvider.GetValue("release").FirstValue);
+            //Name
+            if (bindingContext.ValueProvider.GetValue("name").FirstValue == null)
+                champ.Name = (bindingContext.ValueProvider.GetValue("champ.name").FirstValue);
+            else
+                champ.Name = bindingContext.ValueProvider.GetValue("name").FirstValue;
+
+            //Gender
+            if (bindingContext.ValueProvider.GetValue("gender").FirstValue == null)
+                champ.Gender = (bindingContext.ValueProvider.GetValue("champ.gender").FirstValue);
+            else
+                champ.Gender = bindingContext.ValueProvider.GetValue("gender").FirstValue;
+
+            //Species
+            if (bindingContext.ValueProvider.GetValue("species").FirstValue == null)
+                champ.Species = (bindingContext.ValueProvider.GetValue("champ.species").FirstValue);
+            else
+                champ.Species = bindingContext.ValueProvider.GetValue("species").FirstValue;
+
+            //Resources
+            if (bindingContext.ValueProvider.GetValue("resources").FirstValue == null)
+                champ.Resources = bindingContext.ValueProvider.GetValue("champ.resources").FirstValue;
+            else
+                champ.Resources = bindingContext.ValueProvider.GetValue("resources").FirstValue;
+            
+            //RegionId
+            if (bindingContext.ValueProvider.GetValue("regionid").FirstValue == null)
+                champ.RegionId = int.Parse(bindingContext.ValueProvider.GetValue("champ.regionid").FirstValue);
+            else
+                champ.RegionId = int.Parse(bindingContext.ValueProvider.GetValue("regionid").FirstValue);
+
+            //Release
+            if (bindingContext.ValueProvider.GetValue("release").FirstValue == null)
+                champ.Release = int.Parse(bindingContext.ValueProvider.GetValue("champ.release").FirstValue);
+            else
+                champ.Release = int.Parse(bindingContext.ValueProvider.GetValue("release").FirstValue);
 
             if (bindingContext.HttpContext.Request.Form.Files.Count > 0)
             {

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace RAPC9Y_SOF_2023241.MVC.Models
 {
-    //[ModelBinder(binderType: typeof(ChampionModelBinder))]
+    [ModelBinder(binderType: typeof(ChampionModelBinder))]
     public class Champion
     {
         [Key]
