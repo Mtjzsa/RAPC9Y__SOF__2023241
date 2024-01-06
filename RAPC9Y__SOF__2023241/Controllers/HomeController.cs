@@ -24,7 +24,7 @@ namespace RAPC9Y_SOF_2023241.MVC.Controllers
             _repo = repo;
         }
 
-        public async Task<IActionResult> DelegeteAdmin()
+        public async Task<IActionResult> AddAdmin()
         {
             var principal = this.User;
             var user = await _userManager.GetUserAsync(principal);
@@ -37,7 +37,7 @@ namespace RAPC9Y_SOF_2023241.MVC.Controllers
                 await _roleManager.CreateAsync(role);
             }
             await _userManager.AddToRoleAsync(user, "Admin");
-            return RedirectToAction("index", "home");
+            return RedirectToAction(nameof(Index));
         }
 
         [Authorize(Roles = "Admin")]
