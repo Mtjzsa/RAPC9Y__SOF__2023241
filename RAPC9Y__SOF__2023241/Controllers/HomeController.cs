@@ -43,7 +43,7 @@ namespace RAPC9Y_SOF_2023241.MVC.Controllers
         [Authorize(Roles = "Admin")]
         public IActionResult Admin()
         {
-            return View();
+            return View(_repo.ReadAll());
         }
 
         public IActionResult Index()
@@ -68,6 +68,13 @@ namespace RAPC9Y_SOF_2023241.MVC.Controllers
         public async Task<IActionResult> List()
         {
             return View(_repo.ReadAll());
+        }
+
+        [Authorize(Roles = "Admin")]
+        public IActionResult DeleteAdmin(string id)
+        {
+            _repo.Delete(id);
+            return RedirectToAction("List", "home");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
