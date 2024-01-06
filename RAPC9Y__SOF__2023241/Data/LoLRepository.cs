@@ -53,8 +53,6 @@ namespace RAPC9Y_SOF_2023241.MVC.Data
             old.Resources = item.Resources;
             old.RegionId = item.RegionId;
             old.Release = item.Release;
-            old.Data = item.Data;
-            old.ContentType = item.ContentType;
             ctx.SaveChanges();
 
         }

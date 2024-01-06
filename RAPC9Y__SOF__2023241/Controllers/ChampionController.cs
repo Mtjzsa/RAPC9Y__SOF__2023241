@@ -53,16 +53,8 @@ namespace RAPC9Y_SOF_2023241.MVC.Controllers
             return View(uh);
         }
 
-        public IActionResult Update(UpdateHelper item, IFormFile file)
+        public IActionResult Update(UpdateHelper item)
         {
-            using (var stream = file.OpenReadStream())
-            {
-                byte[] buffer = new byte[file.Length];
-                stream.Read(buffer, 0, (int)file.Length);
-                string filename = item.Champ.Id + "." + file.FileName.Split('.')[1];
-                item.Champ.Data = buffer;
-                item.Champ.ContentType = file.ContentType;
-            }
             if (!ModelState.IsValid)
             {
                 return View(item.Champ);
