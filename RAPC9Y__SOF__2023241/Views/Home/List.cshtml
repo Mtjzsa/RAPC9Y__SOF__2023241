@@ -3,7 +3,7 @@
 
 
 
-<div class="championGrid">
+@* <div class="championGrid">
     @foreach(var item in Model.OrderBy(t => t.Name))
     {
         <div class="championCard">
@@ -13,7 +13,21 @@
             <a href="/champion/update?id=@item.Id">Update</a>
         </div>
 
-
+        
     }
-</div>
+</div> *@
+
+
+    <div class="CardContainer">
+        @foreach (var item in Model.OrderBy(t => t.Name))
+        {
+            <div class="card2">
+                <h2>@item.Name</h2>
+                <span>Inspect</span>
+                <div class="pic" style="background-image: url('@Url.Action("GetImage", "Champion", new {Id = item.Id})')"></div>
+                <button></button>
+            </div>
+        }
+    </div>
+
 

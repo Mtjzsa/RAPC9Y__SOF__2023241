@@ -11,36 +11,114 @@ html {
 html {
 	position: relative;
 	min-height: 100%;
+	background-color: #fff
 }
 
 body {
 	margin-bottom: 60px;
+	background-color: rgb(50, 50, 68)
 }
 
-.championCard {
-	border: 2px solid black;
-	width: 30vw;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	overflow: hidden;
-	border-radius: 30px;
-}
-
-	.championCard img {
-		width: 100%;
-		height: auto;
-	}
-
-	.championCard .heroname {
-		font-size: 1.5em;
-	}
-
-.championGrid {
+.CardContainer {
+	width: 100%;
+	height: 100%;
 	display: grid;
 	grid-template-columns: auto auto auto;
+	grid-column-gap: 20px;
+	padding: 20px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
-.container {
-	margin-left: 0;
+.CardContainer .card2 {
+	position: relative;
+	width: 500px;
+	height: 230px;
+	padding: 15px;
+	background: linear-gradient(60deg, #151516 0%, #1d2229 100%);
+	overflow: hidden;
+	margin-bottom: 15px;
+	border-radius: 20px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.CardContainer .card2 h2 {
+	z-index: 99;
+	position: absolute;
+	bottom: 25px;
+	right: 130px;
+	font-size: 35px;
+	font-weight: 700;
+	color: #fff;
+	pointer-events: none;
+	transition: 0.2s ease;
+	text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.CardContainer .card2 span {
+	z-index: 99;
+	position: absolute;
+	top: 60px;
+	right: 35px;
+	color: #fff;
+	font-size: 12px;
+	letter-spacing: 1px;
+	writing-mode: vertical-lr;
+	transition: 0.2s ease;
+	opacity: 0.7;
+}
+
+.CardContainer .card2 .pic {
+	z-index: 100;
+	width: 395px;
+	height: 200px;
+	border-radius: 12px;
+	filter: grayscale(100%);
+	transition: 0.3s ease;
+	background-size: cover;
+	background-position: center;
+}
+
+.CardContainer .card2 button {
+	position: absolute;
+	right: 30px;
+	bottom: 40px;
+	width: 30px;
+	height: 30px;
+	background-color: #772a9b;
+	border: none;
+	border-radius: 30px;
+	cursor: pointer;
+	outline: none;
+	opacity: 1;
+	transition: 0.3s ease;
+}
+
+.CardContainer .card2:hover button {
+	transform: scale(16.5);
+	opacity: 0.5;
+}
+
+.CardContainer .card2:hover h2 {
+	bottom: 80px;
+	right: 50px;
+}
+
+.CardContainer .card2:hover span {
+	opacity: 0;
+	top: 80px;
+}
+
+.CardContainer .card2:hover .pic{
+	filter: grayscale(0%);
+	width: 470px;
+}
+
+.CardContainer .card2:hover .pic{
+	transition: 0.3s ease;
+}
+
+.CardContainer .card2:hover button {
+	background-color: #26c3a1;
 }
