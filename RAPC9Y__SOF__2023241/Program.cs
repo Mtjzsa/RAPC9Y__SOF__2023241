@@ -27,6 +27,14 @@ builder.Services.AddDefaultIdentity<SiteUser>(options =>
     options.Password.RequireUppercase = false;
 
 }).AddEntityFrameworkStores<LoLDbContext>();
+
+builder.Services.AddAuthentication().AddFacebook(opt =>
+{
+    opt.AppId = "608115458103194";
+    opt.AppSecret = "6368bc0c8405cb0181d946ec6f16b434";
+});
+
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
