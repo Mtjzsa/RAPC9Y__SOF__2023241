@@ -41,7 +41,7 @@ namespace RAPC9Y_SOF_2023241.MVC.Controllers
         public IActionResult Delete(string id)
         {
             _repo.Delete(id);
-            return RedirectToAction("List", "home");
+            return RedirectToAction("Admin", "home");
         }
 
         public IActionResult ChampionProfile(string id)
@@ -65,7 +65,7 @@ namespace RAPC9Y_SOF_2023241.MVC.Controllers
                 return View(item.Champ);
             }
             _repo.Update(item.Champ);
-            return RedirectToAction("List", "home");
+            return RedirectToAction("Index", "home");
         }
 
         public IActionResult GetImage(string id)
