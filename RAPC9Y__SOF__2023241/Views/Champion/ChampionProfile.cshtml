@@ -1,0 +1,32 @@
+﻿@using RAPC9Y_SOF_2023241.MVC.Models
+@model Champion
+
+@{
+    string bg = $"/championicons/{Model.Name}.jpg";
+    string nobg = $"/championicons/{Model.Name}1.jpg";
+}
+
+<div class="content">
+    <div class="profileName">
+        <h1>@Model.Name</h1>
+    </div>
+    <div class="swiper">
+         <div class="swiper-slide" style="background-image: url('@Url.Action("GetImage", "Champion", new {Id = Model.Id})')">
+         </div>
+         </div>
+    <div class="info">
+        <div>
+            <p>Gender</p>
+            <p>Resources</p>
+            <p>Region</p>
+            <p>Release date</p>
+        </div>
+        <div>
+            <p>@Model.Gender</p>
+            <p>@Model.Resources</p>
+            <p>@Model.Region.RegionName</p>
+            <p>@Model.Release</p>
+        </div>
+    </div>
+    <a href="/champion/update?id=@Model.Id" class="btn fourth">Update</a>
+</div>

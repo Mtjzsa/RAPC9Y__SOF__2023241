@@ -44,6 +44,11 @@ namespace RAPC9Y_SOF_2023241.MVC.Controllers
             return RedirectToAction("List", "home");
         }
 
+        public IActionResult ChampionProfile(string id)
+        {
+            return View(_repo.Read(id));
+        }
+
         [HttpGet]
         public IActionResult Update(string id)
         {
