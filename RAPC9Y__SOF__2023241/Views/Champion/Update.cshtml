@@ -33,8 +33,11 @@
                             if (item.Id == Model.Champ.RegionId)
                             {
                                 <option selected value="@item.Id">@item.RegionName</option>
+                            }else
+                            {
+                                <option value="@item.Id">@item.RegionName</option>
                             }
-                            <option value="@item.Id">@item.RegionName</option>
+                            
                         }
                     </select>
                     <label asp-for="Champ.Region"></label>
