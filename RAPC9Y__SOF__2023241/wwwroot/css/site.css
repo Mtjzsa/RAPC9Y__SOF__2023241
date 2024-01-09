@@ -142,16 +142,18 @@ body {
 	justify-content: center;
 }
 
+.navbar-nav .nav-item .btn {
+	border: 0px solid transparent;
+	border-radius: 0;
+}
 /*
 	--------------------------------------------------------------INDEX-------------------------------------------------------------------
 */
-
-.myContainer{
-	display:flex;
+.myContainer {
+	display: flex;
 	gap: 10px;
 	width: 800px;
 	height: 400px;
-
 }
 
 .img{
@@ -359,34 +361,70 @@ footer {
 	text-align: center;
 	color: #B79225;
 	font-weight: 500;
-	font-size: 2rem;
+	font-size: 4rem;
 	font-family: 'League', sans-serif;
 }
 
-.adminDiv {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	flex-flow: column;
+.adminDiv{
+	display: grid;
+	width: 1200px;
 }
 
-.adminChamp {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	border-radius: 30px;
-	background-color: #fff;
-	justify-content: space-evenly;
-	align-items: center;
-	margin-bottom: 10px;
+.adminDiv table{
+	border-collapse: collapse;
+	background-color: rgba(255,255, 68, 10%);
+	margin: 10px 10px;
 }
 
-.adminChamp p {
+.adminHead td {
 	font-size: 1.5rem;
 	color: #B79225;
 	font-weight: 500;
-	margin-top: 1rem;
-	margin-bottom:1rem;
+	border-right: solid 2px #B79225;
+	border-left: solid 2px #B79225;
+	text-align: center;
+	padding-top: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 15px;
+	border: 0;
+}
+
+.adminChamp {
+	border: none;
+}
+
+
+.verticalSplit {
+	border-top: none;
+	border-bottom: none;
+}
+
+
+.adminChamp td{
+	font-size: 1.5rem;
+	color: #B79225;
+	font-weight: 500;
+	border-right: solid 2px #B79225;
+	border-left: solid 2px #B79225;
+	text-align: center;
+	padding-top: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 15px;
+}
+
+.adminChamp a, .adminChamp span {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.verticalSplit:first-of-type {
+	border-left: none;
+}
+
+.verticalSplit:last-of-type {
+	border-right: none;
 }
 
 

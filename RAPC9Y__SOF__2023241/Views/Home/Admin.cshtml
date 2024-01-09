@@ -4,17 +4,30 @@
 <h2 class="adminTitle">Admin Menu</h2>
 
 <div class="adminDiv">
-    
-    @foreach (var item in Model.OrderBy(t=>t.Name))
-    {
-        <div class="adminChamp">
-            <p>@item.Name</p>
-            <p>@item.Gender</p>
-            <p>@item.Resources</p>
-            <p>@item.Region.RegionName</p>
-            <p>@item.Release</p>
-            <a href="/champion/update?id=@item.Id" class="">Update</a>
-            <a href="/champion/delete?id=@item.Id" class="">Delete</a>
-        </div>
-    }
+    <table>
+        <tr class="adminHead">
+            <td>Name</td>
+            <td>Gender</td>
+            <td>Resources</td>
+            <td>Region</td>
+            <td>Release</td>
+            <td colspan="2">Actions</td>
+        </tr>
+        
+        @foreach (var item in Model.OrderBy(t => t.Name))
+        {
+            
+            <tr class="adminChamp">
+                <td class="verticalSplit">@item.Name</td>
+                <td>@item.Gender</td>
+                <td>@item.Resources</td>
+                <td>@item.Region.RegionName</td>
+                <td>@item.Release</td>
+                <td><a href="/champion/update?id=@item.Id" class=""><span>Update</span></a></td>
+                <td class="verticalSplit"><a href="/champion/delete?id=@item.Id" class=""><span>Delete</span></a></td>
+            </tr>
+
+        }
+
+    </table>
 </div>
