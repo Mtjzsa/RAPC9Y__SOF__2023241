@@ -14,18 +14,41 @@
          <div class="swiper-slide" style="background-image: url('@Url.Action("GetImage", "Champion", new {Id = Model.Id})')">
          </div>
          </div>
-    <div class="info">
+    <div class="myTable">
         <div>
-            <p>Gender</p>
-            <p>Resources</p>
-            <p>Region</p>
-            <p>Release date</p>
+            <table>
+                <tr>
+                    <td>Gender</td>
+                    <td>@Model.Gender</td>
+                </tr>
+            </table>
+            <hr />
         </div>
         <div>
-            <p>@Model.Gender</p>
-            <p>@Model.Resources</p>
-            <p>@Model.Region.RegionName</p>
-            <p>@Model.Release</p>
+            <table>
+                <tr>
+                    <td>Resources</td>
+                    <td>@Model.Resources</td>
+                </tr>
+            </table>
+            <hr />
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td>Region</td>
+                    <td>@Model.Region.RegionName</td>
+                </tr>
+            </table>
+            <hr />
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td>Release date</td>
+                    <td>@Model.Release</td>
+                </tr>
+            </table>
         </div>
     </div>
     <a href="/champion/update?id=@Model.Id" class="btn fourth">Update</a>
