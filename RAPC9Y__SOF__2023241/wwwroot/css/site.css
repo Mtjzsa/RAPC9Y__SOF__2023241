@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 html {
 	font-size: 14px;
 }
@@ -11,14 +13,19 @@ html {
 html {
 	position: relative;
 	min-height: 100%;
-	background-color: #fff
+	background-color: #320E3B;
+	
 }
 
 body {
 	margin-bottom: 60px;
-	background-color: rgb(50, 50, 68)
+	background-color: #320E3B;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
+/*
+	--------------------------------------------------------------LIST-------------------------------------------------------------------
+*/
 .CardContainer {
 	width: 100%;
 	height: 100%;
@@ -74,7 +81,7 @@ body {
 	width: 395px;
 	height: 200px;
 	border-radius: 12px;
-	filter: grayscale(100%);
+	filter: grayscale(50%);
 	transition: 0.3s ease;
 	background-size: cover;
 	background-position: center;
@@ -96,7 +103,7 @@ body {
 }
 
 .CardContainer .card2:hover button {
-	transform: scale(16.5);
+	transform: scale(18.5);
 	opacity: 0.5;
 }
 
@@ -120,5 +127,219 @@ body {
 }
 
 .CardContainer .card2:hover button {
-	background-color: #26c3a1;
+	background-color: #772a9b;
 }
+
+/*
+	--------------------------------------------------------------LIST-END------------------------------------------------------------------
+*/
+
+.navbar-nav{
+	justify-content: center;
+}
+
+/*
+	--------------------------------------------------------------INDEX-------------------------------------------------------------------
+*/
+
+.myContainer{
+	display:flex;
+	gap: 10px;
+	width: 800px;
+	height: 400px;
+
+}
+
+.img{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	flex: 1;
+	background-size: cover;
+	background-position: center;
+	filter: brightness(0.7) saturate(0.2) contrast(1) blur(2px);
+	border-radius: 20px;
+	transition: flex 0.3s, filter;
+	overflow: hidden;
+	box-shadow: rgba(0,0,0,0.25) 0px 25px 50px -12px;
+	border: 1px solid #8b9da9;
+}
+
+.img:hover{
+	flex: 8;
+	filter: none;
+}
+
+.img span {
+	display: block;
+	width: 50%;
+	padding: 10px;
+	font-size: 25px;
+	text-align: center;
+	color: #fff;
+	letter-spacing: 1px;
+	font-weight: bold;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: all 0.5s;
+	text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
+	color: #DAA623;
+	top: 75%;
+	background-color: none;
+	border-radius: 30px;
+}
+
+.img:hover span {
+	background-color: #4b4b4b;
+	border-radius: 30px;
+}
+
+.homepage {
+	display: grid;
+	grid-template-columns: auto auto ;
+	grid-column-gap: 250px;
+	place-items: center;
+	height: 70vh;
+}
+
+.text-center h1, p{
+	color:#DAA623;
+}
+
+.buttonDiv h1 {
+	color: #DAA623;
+	margin-top:0;
+	text-align: center;
+}
+
+.homepage .btn, .content .btn{
+	box-sizing: border-box;
+	background-color: transparent;
+	border: 2px solid #DAA623;
+	border-radius: 35px;
+	color: #DAA623;
+	cursor: pointer;
+	display: flex;
+	align-self: center;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1;
+	margin: 20px;
+	padding: 1.2em 2.8em;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	width: 25%;
+	place-content: center;
+	margin: 20px auto;
+}
+
+.homepage .btn:hover, .homepage .btn:focus, .content .btn:hover, .content .btn:focus{
+	color: #320E3B;
+	outline: 0;
+}
+
+.fourth {
+	border-color: #DAA623;
+	color: #fff;
+	background-image: linear-gradient(45deg, #DAA623 50%, transparent 50%);
+	background-position: 100%;
+	background-size: 400%;
+	transition: background 200ms ease-in-out;
+}
+
+.fourth:hover {
+	background-position: 0;
+}
+
+/*
+	--------------------------------------------------------------INDEX-END------------------------------------------------------------------
+*/
+
+.headerbg {
+	background-color: #DAA623;
+	
+}
+
+.iconbg {
+	padding: 12px;
+	margin: 0px 10px 0px 10px;
+}
+
+footer {
+	background-color: #DAA623;
+}
+
+.text-muted {
+	color: #320E3B !important
+}
+
+/* -------------------------------------------------------------------------------*/
+.pb-3 {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+
+/*
+	--------------------------------------------------------------CHAMPPROFILE-------------------------------------------------------------------
+*/
+
+.content {
+	display: grid;
+	grid-template-rows: auto auto auto;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient( 180deg, rgba(255, 255, 68, 0.28) 25%, rgba(255, 255, 68, 0) 100%);
+	backdrop-filter: blur(30px);
+	border-radius: 20px;
+	box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset, 0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+	z-index: 10;
+	padding-top: 20px;
+	width: 700px;
+}
+
+.profileName h1 {
+	color: #B79225;
+	font-weight: 500;
+	font-size: 3rem;
+	line-height: 1.5;
+	text-align: center;
+	font-family: 'Anton', sans-serif;
+}
+
+.info {
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: center;
+	align-items: center;
+	text-align: justify;
+	gap: 50%;
+}
+
+.info p {
+	color: #B79225;
+	font-weight: 500;
+	font-size: 1.7rem;
+	line-height: 1.5;
+	font-family: 'Anton', sans-serif;
+}
+
+.swiper {
+	width: 600px;
+	padding-bottom: 20px;
+}
+
+.swiper-slide {
+	height: 370px;
+	background-size: cover;
+	position: relative;
+	box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+
+/*
+	--------------------------------------------------------------CHAMPPROFILE-END------------------------------------------------------------------
+*/
