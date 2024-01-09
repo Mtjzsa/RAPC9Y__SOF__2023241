@@ -48,7 +48,7 @@ namespace RAPC9Y_SOF_2023241.MVC.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(_repo.ReadAll());
         }
 
         [Authorize]
