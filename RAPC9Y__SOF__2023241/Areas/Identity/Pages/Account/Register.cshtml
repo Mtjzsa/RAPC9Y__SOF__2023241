@@ -4,10 +4,10 @@
     ViewData["Title"] = "Register";
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1 class="reglogH1">@ViewData["Title"]</h1>
 
-<div class="row">
-    <div class="col-md-4">
+<div class="reglogPage">
+    <div class="reglogDiv">
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" enctype="multipart/form-data">
             <h2>Create a new account.</h2>
             <hr />
@@ -42,10 +42,13 @@
                 <input type="file" asp-for="Input.File"/>
             </div>
             
-            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+            <div class="reglogButton">
+                <button id="registerSubmit" type="submit" class="btn btn-lg btn-primary">Register</button>
+            </div>
+            
         </form>
     </div>
-    <div class="col-md-6 col-md-offset-2">
+    <div class="External">
         <section>
             <h3>Use another service to register.</h3>
             <hr />
@@ -62,11 +65,11 @@
                 else
                 {
                     <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
+                        <div class="reglogButton">
                             <p>
                                 @foreach (var provider in Model.ExternalLogins!)
                                 {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                                    <button type="submit" class="btn btn-lg btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
                                 }
                             </p>
                         </div>

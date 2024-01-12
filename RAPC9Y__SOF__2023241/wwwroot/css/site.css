@@ -447,7 +447,7 @@ footer {
 	height: 100%;
 	display: grid;
 	margin-bottom: 5px;
-	background-color: #DAA623;
+	background-color: rgba(75, 80, 67, 0.75);
 	border-radius: 10px;
 }
 
@@ -493,4 +493,71 @@ footer {
 
 /*
 	--------------------------------------------------------------CREATE-END------------------------------------------------------------------
+*/
+
+/*
+	--------------------------------------------------------------LOGIN/REGISTER-------------------------------------------------------------------
+*/
+.reglogH1 {
+	color: #DAA623;
+	text-align: center;
+}
+
+.reglogPage h2, .reglogPage h3 {
+	color: #DAA623;
+	text-align: center;
+}
+
+.reglogPage {
+	border-radius: 20px;
+	background-color: rgba(75, 80, 67, 0.75);
+	padding: 10px;
+	width: 525px;
+}
+
+.reglogDiv div {
+	padding-bottom: 10px;
+}
+
+.External .reglogButton{
+	display: grid;
+	justify-content: center;
+}
+
+.reglogButton {
+
+}
+
+.reglogDiv .reglogButton button{
+	width: 100%;
+}
+
+.reglogButton button {
+	background-color: #DAA623;
+	color: #320E3B;
+	border: 0px;
+}
+
+.reglogButton button:hover {
+	background-color: #DAA623;
+	color: #320E3B;
+	border: 0px;
+}
+
+.reglogLinks{
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.reglogRemember {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+/*
+	--------------------------------------------------------------LOGIN/REGISTER-END------------------------------------------------------------------
 */
