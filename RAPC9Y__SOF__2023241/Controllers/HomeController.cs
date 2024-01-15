@@ -59,9 +59,17 @@ namespace RAPC9Y_SOF_2023241.MVC.Controllers
             return View();
         }
 
-        private async Task<IActionResult> GetUserImage(string userid)
+        [Authorize]
+        public async Task<IActionResult> UserProfile()
         {
-            var user = _userManager.Users.FirstOrDefault(t => t.Id == userid);
+            var siteuser = this.User;
+            var user = await _userManager.GetUserAsync(siteuser);
+            return View(user);
+        }
+
+        public async Task<IActionResult> GetUserImage(string id)
+        {
+            var user = _userManager.Users.FirstOrDefault(t => t.Id == id);
             return new FileContentResult(user.Data, user.ContentType);
         }
 
