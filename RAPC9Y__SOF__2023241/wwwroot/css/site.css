@@ -561,3 +561,57 @@ footer {
 /*
 	--------------------------------------------------------------LOGIN/REGISTER-END------------------------------------------------------------------
 */
+
+/*
+	--------------------------------------------------------------SITEUSER-------------------------------------------------------------------
+*/
+
+.userCard {
+	border-radius: 20px;
+	background-color: rgba(75, 80, 67, 0.75);
+	height: 75vh;
+	width: 900px;
+	text-align:center;
+}
+
+.userCard h1 {
+	padding-top: 5%;
+	color: #DAA623;
+	text-decoration: underline
+}
+
+.userGrid {
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: center;
+	align-items: center;
+	column-gap: 7.5rem;
+	padding-top: 5%;
+}
+
+.userImg {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+
+.userImg img {
+	height: 35vh;
+	border-radius: 25px;
+}
+
+.userData {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	color: #DAA623;
+	text-align: center;
+}
+
+.userData h4 {
+	color: #320E3B
+}
+
+/*
+	--------------------------------------------------------------SITEUSER-END------------------------------------------------------------------
+*/

@@ -5,12 +5,23 @@
 @inject SignInManager<SiteUser> SignInManager
 @inject UserManager<SiteUser> UserManager
 
-<div>
-    <h1>Hello this is ur page</h1>
-    <h2>@Model.UserName</h2>
-    <h3>@Model.FirstName @Model.LastName</h3>
-    <h4>@Model.Email</h4>
-    <img src="@Url.Action("GetUserImage", "Home", new {id = @Model.Id})" />
+<div class="userCard">
+    <h1>This is ur profile page</h1>
+    <div class="userGrid">
+        <div class="userImg">
+            <img src="@Url.Action("GetUserImage", "Home", new {id = @Model.Id})" />
+        </div>
+        <div class="userData">
+            <h1>Firstname</h1>
+            <h4>@Model.FirstName</h4>
+            <h1>Lastname</h1>
+            <h4>@Model.LastName</h4>
+            <h1>Username</h1>
+            <h4>@Model.UserName</h4>
+            <h1>Email</h1>
+            <h4>@Model.Email</h4>
+        </div>
+    </div>
 </div>
 
 
