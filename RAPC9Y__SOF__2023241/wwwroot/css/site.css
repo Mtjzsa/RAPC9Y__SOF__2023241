@@ -142,6 +142,37 @@ body {
 	background-color: #772a9b;
 }
 
+@media screen and (max-width: 1600px) {
+	.CardContainer {
+		grid-template-columns: auto auto;
+	}
+}
+
+
+@media screen and (max-width: 1100px) {
+	.CardContainer {
+		grid-template-columns: auto;
+	}
+	.CardContainer .card2 {
+		height: 220px;
+		width: 430px;
+	}
+
+	.CardContainer .card2 .pic {
+		width: 350px;
+		height: 190px;
+	}
+
+	.CardContainer .card2:hover .pic {
+		filter: grayscale(0%);
+		width: 400px;
+	}
+
+	.CardContainer .card2:hover .pic {
+		transition: 0.3s ease;
+	}
+}	
+
 /*
 	--------------------------------------------------------------LIST-END------------------------------------------------------------------
 */
@@ -268,180 +299,284 @@ body {
 	background-position: 0;
 }
 
-/*
-	--------------------------------------------------------------INDEX-END------------------------------------------------------------------
-*/
+@media screen and (max-width: 1400px) {
+	.text-center{
+		font-size: 10px;
+	}
 
-.headerbg {
-	background-color: #DAA623;
+	.homepage{
+		grid-template-columns: auto;
+	}
+
 	
 }
 
-.iconbg {
-	padding: 12px;
-	margin: 0px 10px 0px 10px;
+@media screen and (max-width: 900px) {
+	.myContainer{
+		width: 500px;
+		flex-direction: column;
+		justify-items: center;
+		align-items: center;
+	}
+	
+	.img{
+		width: 80%;
+	}
+
+	.img.hover{
+		flex: 8;
+	}
+
+	.img span{
+		width: 30%;
+		font-size: 12px;
+		top: 70%;
+	}
+
 }
 
-footer {
-	background-color: #DAA623;
-}
+	/*
+	--------------------------------------------------------------INDEX-END------------------------------------------------------------------
+*/
 
-.text-muted {
-	color: #320E3B !important
-}
+	.headerbg {
+		background-color: #DAA623;
+	}
 
-/* -------------------------------------------------------------------------------*/
-.pb-3 {
-	display: grid;
-	align-items: center;
-	justify-content: center;
-}
+	.iconbg {
+		padding: 12px;
+		margin: 0px 10px 0px 10px;
+	}
 
-/*
+	footer {
+		background-color: #DAA623;
+	}
+
+	.text-muted {
+		color: #320E3B !important
+	}
+
+	/* -------------------------------------------------------------------------------*/
+	.pb-3 {
+		display: grid;
+		align-items: center;
+		justify-content: center;
+	}
+
+	/*
 	--------------------------------------------------------------CHAMPPROFILE-------------------------------------------------------------------
 */
-.content {
-	display: grid;
-	grid-template-rows: auto auto auto;
-	align-items: center;
-	justify-content: center;
-	background: linear-gradient( 180deg, rgba(255, 255, 68, 0.28) 25%, rgba(255, 255, 68, 0) 100%);
-	backdrop-filter: blur(30px);
-	border-radius: 20px;
-	box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset, 0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
-	z-index: 10;
-	padding-top: 20px;
-	width: 700px;
-}
+	.content {
+		display: grid;
+		grid-template-rows: auto auto auto;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient( 180deg, rgba(255, 255, 68, 0.28) 25%, rgba(255, 255, 68, 0) 100%);
+		backdrop-filter: blur(30px);
+		border-radius: 20px;
+		box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset, 0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+		z-index: 10;
+		padding-top: 20px;
+		width: 700px;
+	}
 
-.profileName h1 {
-	color: #DAA623;
-	font-weight: 500;
-	font-size: 3rem;
-	line-height: 1.5;
-	text-align: center;
-	font-family: 'League', sans-serif;
-}
+	.profileName h1 {
+		color: #DAA623;
+		font-weight: 500;
+		font-size: 3rem;
+		line-height: 1.5;
+		text-align: center;
+		font-family: 'League', sans-serif;
+	}
 
-.swiper {
-	width: 600px;
-	padding-bottom: 20px;
-}
+	.swiper {
+		width: 600px;
+		padding-bottom: 20px;
+	}
 
-.swiper-slide {
-	height: 350px;
-	background-size: cover;
-	position: relative;
-	box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-	border-radius: 10px;
-}
+	.swiper-slide {
+		height: 350px;
+		background-size: cover;
+		position: relative;
+		box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+		border-radius: 10px;
+	}
 
-.myTable {
-	color: #DAA623;
-	font-weight: 500;
-	font-size: 1.26rem;
-	font-family: 'League', sans-serif;
-	display: grid;
-	grid-template-rows: auto auto auto auto;
-	justify-content: center;
-	align-items: center;
-}
+	.myTable {
+		color: #DAA623;
+		font-weight: 500;
+		font-size: 1.26rem;
+		font-family: 'League', sans-serif;
+		display: grid;
+		grid-template-rows: auto auto auto auto;
+		justify-content: center;
+		align-items: center;
+	}
 
-.myTable td{
+.myTable td {
 	text-align: center;
 	width: 250px;
 }
 
-.myTable hr{
+.myTable hr {
 	height: 2px;
 }
 
-/*
+@media screen and (max-width: 750px) {
+	.content{
+		width: 650px;
+	}
+
+	.swiper{
+		width: 500px;
+	}
+
+	.swiper-slide{
+		height: 300px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.content {
+		width: 400px;
+	}
+
+	.swiper {
+		width: 300px;
+	}
+
+	.swiper-slide {
+		height: 200px;
+	}
+
+	.myTable td {
+		text-align: center;
+		width: 160px;
+	}
+}
+
+	/*
 	--------------------------------------------------------------CHAMPPROFILE-END------------------------------------------------------------------
 */
 
-/*
+	/*
 	--------------------------------------------------------------ADMINPAGE-------------------------------------------------------------------
 */
 
-.adminTitle {
-	text-align: center;
-	color: #DAA623;
-	font-weight: 500;
-	font-size: 4rem;
-	font-family: 'League', sans-serif;
+	.adminTitle {
+		text-align: center;
+		color: #DAA623;
+		font-weight: 500;
+		font-size: 4rem;
+		font-family: 'League', sans-serif;
+	}
+
+	.adminDiv {
+		display: grid;
+		width: 1200px;
+		align-items:center;
+		justify-content:center;
+	}
+
+		.adminDiv table {
+			border-collapse: collapse;
+			background-color: rgba(255,255, 68, 10%);
+			margin: 10px 10px;
+		}
+
+	.adminHead td {
+		font-size: 1.5rem;
+		color: #DAA623;
+		font-weight: 500;
+		border-right: solid 2px #DAA623;
+		border-left: solid 2px #DAA623;
+		text-align: center;
+		padding-top: 15px;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 15px;
+		border: 0;
+	}
+
+	.adminChamp {
+		border: none;
+	}
+
+
+	.verticalSplit {
+		border-top: none;
+		border-bottom: none;
+	}
+
+
+	.adminChamp td {
+		font-size: 1.5rem;
+		color: #DAA623;
+		font-weight: 500;
+		border-right: solid 2px #B79225;
+		border-left: solid 2px #B79225;
+		text-align: center;
+		padding-top: 15px;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 15px;
+	}
+
+	.adminChamp a, .adminChamp span {
+		cursor: pointer;
+		text-decoration: none;
+	}
+
+	.verticalSplit:first-of-type {
+		border-left: none;
+	}
+
+	.verticalSplit:last-of-type {
+		border-right: none;
+	}
+
+@media screen and (max-width: 1600px){
+	.adminTitle{
+		font-size: 2rem;
+	}
+
+	.adminChamp td{
+		font-size: 1rem;
+	}
+
+	.adminHead td{
+		font-size: 1rem;
+	}
+
+	.adminDiv{
+		width: 125px;
+	}
 }
 
-.adminDiv{
-	display: grid;
-	width: 1200px;
+@media screen and (max-width: 1000px) {
+	.adminTitle {
+		font-size: 2rem;
+	}
+
+	.adminChamp td {
+		font-size: 0.6rem;
+	}
+
+	.adminHead td {
+		font-size: 0.6rem;
+	}
+
+	.adminDiv {
+		width: 125px;
+		margin-left:25px;
+	}
 }
-
-.adminDiv table{
-	border-collapse: collapse;
-	background-color: rgba(255,255, 68, 10%);
-	margin: 10px 10px;
-}
-
-.adminHead td {
-	font-size: 1.5rem;
-	color: #DAA623;
-	font-weight: 500;
-	border-right: solid 2px #DAA623;
-	border-left: solid 2px #DAA623;
-	text-align: center;
-	padding-top: 15px;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-bottom: 15px;
-	border: 0;
-}
-
-.adminChamp {
-	border: none;
-}
-
-
-.verticalSplit {
-	border-top: none;
-	border-bottom: none;
-}
-
-
-.adminChamp td{
-	font-size: 1.5rem;
-	color: #DAA623;
-	font-weight: 500;
-	border-right: solid 2px #B79225;
-	border-left: solid 2px #B79225;
-	text-align: center;
-	padding-top: 15px;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-bottom: 15px;
-}
-
-.adminChamp a, .adminChamp span {
-	cursor: pointer;
-	text-decoration: none;
-}
-
-.verticalSplit:first-of-type {
-	border-left: none;
-}
-
-.verticalSplit:last-of-type {
-	border-right: none;
-}
-
-
 /*
 	--------------------------------------------------------------ADMINPAGE-END------------------------------------------------------------------
 */
 /*
 	--------------------------------------------------------------UPDATE-------------------------------------------------------------------
 */
-
 .updateTitle {
 	text-align: center;
 	color: #DAA623;
@@ -451,175 +586,199 @@ footer {
 	margin-bottom: 10px;
 }
 
-.updateDiv {
-	height: 100%;
-	display: grid;
-	margin-bottom: 5px;
-	background-color: rgba(75, 80, 67, 0.75);
-	border-radius: 10px;
-}
+	.updateDiv {
+		height: 100%;
+		display: grid;
+		margin-bottom: 5px;
+		background-color: rgba(75, 80, 67, 0.75);
+		border-radius: 10px;
+	}
 
-.updateForm div{
-	display: grid;
-	padding-bottom: 5px;
-	margin: 10px;
-}
+	.updateForm div {
+		display: grid;
+		padding-bottom: 5px;
+		margin: 10px;
+	}
 
-/*
+	/*
 	--------------------------------------------------------------UPDATE-END------------------------------------------------------------------
 */
-/*
+	/*
 	--------------------------------------------------------------CREATE-------------------------------------------------------------------
 */
-.createPic input, .createPic label, .createPic div{
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	margin: 0px;
-	padding: 0px;
-	border: 0px;
+	.createPic input, .createPic label, .createPic div {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		margin: 0px;
+		padding: 0px;
+		border: 0px;
+	}
 
-}
-.createPic label{
-	color: gray;
-	font-size: 13px;
-	padding-top: 7px;
-	padding-bottom: 0px;
-	padding-left: 12px;
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-	
-}
+	.createPic label {
+		color: gray;
+		font-size: 13px;
+		padding-top: 7px;
+		padding-bottom: 0px;
+		padding-left: 12px;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
 
-.createPic input {
-	padding: 10px;
-	padding-top: 0px;
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
-	border-right: 0;
-}
+	.createPic input {
+		padding: 10px;
+		padding-top: 0px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		border-right: 0;
+	}
 
-/*
+	/*
 	--------------------------------------------------------------CREATE-END------------------------------------------------------------------
 */
 
-/*
+	/*
 	--------------------------------------------------------------LOGIN/REGISTER-------------------------------------------------------------------
 */
-.reglogH1 {
-	color: #DAA623;
-	text-align: center;
+	.reglogH1 {
+		color: #DAA623;
+		text-align: center;
+	}
+
+	.reglogPage h2, .reglogPage h3 {
+		color: #DAA623;
+		text-align: center;
+	}
+
+	.reglogPage {
+		border-radius: 20px;
+		background-color: rgba(75, 80, 67, 0.75);
+		padding: 10px;
+		width: 525px;
+	}
+
+	.reglogDiv div {
+		padding-bottom: 10px;
+	}
+
+	.External .reglogButton {
+		display: grid;
+		justify-content: center;
+	}
+
+	.reglogButton {
+	}
+
+	.reglogDiv .reglogButton button {
+		width: 100%;
+	}
+
+	.reglogButton button {
+		background-color: #DAA623;
+		color: #320E3B;
+		border: 0px;
+	}
+
+		.reglogButton button:hover {
+			background-color: #DAA623;
+			color: #320E3B;
+			border: 0px;
+		}
+
+	.reglogLinks {
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.reglogRemember {
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+@media screen and (max-width: 850px){
+	.reglogPage{
+		width: 350px;
+	}
 }
-
-.reglogPage h2, .reglogPage h3 {
-	color: #DAA623;
-	text-align: center;
-}
-
-.reglogPage {
-	border-radius: 20px;
-	background-color: rgba(75, 80, 67, 0.75);
-	padding: 10px;
-	width: 525px;
-}
-
-.reglogDiv div {
-	padding-bottom: 10px;
-}
-
-.External .reglogButton{
-	display: grid;
-	justify-content: center;
-}
-
-.reglogButton {
-
-}
-
-.reglogDiv .reglogButton button{
-	width: 100%;
-}
-
-.reglogButton button {
-	background-color: #DAA623;
-	color: #320E3B;
-	border: 0px;
-}
-
-.reglogButton button:hover {
-	background-color: #DAA623;
-	color: #320E3B;
-	border: 0px;
-}
-
-.reglogLinks{
-	display: grid;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-}
-
-.reglogRemember {
-	display: grid;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-}
-
 /*
 	--------------------------------------------------------------LOGIN/REGISTER-END------------------------------------------------------------------
 */
-
 /*
 	--------------------------------------------------------------SITEUSER-------------------------------------------------------------------
 */
-
 .userCard {
 	border-radius: 20px;
 	background-color: rgba(75, 80, 67, 0.75);
 	height: 75vh;
 	width: 900px;
-	text-align:center;
-}
-
-.userCard h1 {
-	padding-top: 5%;
-	color: #DAA623;
-	text-decoration: underline
-}
-
-.userGrid {
-	display: grid;
-	grid-template-columns: auto auto;
-	justify-content: center;
-	align-items: center;
-	column-gap: 7.5rem;
-	padding-top: 5%;
-}
-
-.userImg {
-	display: grid;
-	justify-content: center;
-	align-items: center;
-}
-
-.userImg img {
-	height: 35vh;
-	border-radius: 25px;
-}
-
-.userData {
-	display: grid;
-	justify-content: center;
-	align-items: center;
-	color: #DAA623;
 	text-align: center;
 }
 
-.userData h4 {
-	color: #320E3B
+		.userCard h1 {
+			padding-top: 5%;
+			color: #DAA623;
+			text-decoration: underline
+		}
+
+	.userGrid {
+		display: grid;
+		grid-template-columns: auto auto;
+		justify-content: center;
+		align-items: center;
+		column-gap: 7.5rem;
+		padding-top: 5%;
+	}
+
+	.userImg {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+	}
+
+		.userImg img {
+			height: 35vh;
+			border-radius: 25px;
+		}
+
+	.userData {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		color: #DAA623;
+		text-align: center;
+	}
+
+		.userData h4 {
+			color: #320E3B
+		}
+
+@media screen and (max-width: 1200px) {
+	.userCard {
+		width: 800px;
+	}
+
+	.userImg img{
+		height: 30vh;
+	}
 }
 
-/*
+@media screen and (max-width: 850px) {
+	.userCard{
+		width: 400px;
+		height: 100%;
+	}
+
+	.userGrid{
+		grid-template-columns: auto;
+	}
+}
+
+
+
+	/*
 	--------------------------------------------------------------SITEUSER-END------------------------------------------------------------------
 */
