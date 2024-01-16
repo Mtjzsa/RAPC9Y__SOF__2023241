@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using RAPC9Y__SOF__2023241.Data;
+using RAPC9Y__SOF__2023241.Helper;
 using RAPC9Y_SOF_2023241.MVC.Data;
 using RAPC9Y_SOF_2023241.MVC.Models;
 
@@ -20,7 +22,7 @@ builder.Services.AddDbContext<LoLDbContext>(opt =>
 
 builder.Services.AddDefaultIdentity<SiteUser>(options => 
 {
-    options.SignIn.RequireConfirmedAccount = false;
+    options.SignIn.RequireConfirmedAccount = true;
     options.Password.RequireDigit = false;
     options.Password.RequiredLength = 4;
     options.Password.RequireNonAlphanumeric = false;
@@ -36,6 +38,7 @@ builder.Services.AddAuthentication().AddFacebook(opt =>
     opt.AppSecret = "6368bc0c8405cb0181d946ec6f16b434";
 });
 
+builder.Services.AddTransient<IEmailSender, EmailSender>();
 
 builder.Services.AddControllersWithViews();
 
