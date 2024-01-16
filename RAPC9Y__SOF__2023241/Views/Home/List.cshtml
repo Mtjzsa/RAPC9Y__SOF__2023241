@@ -4,6 +4,14 @@
 @{
     ViewData["Title"] = "All Champions";
 }
+
+<div class="listCard">
+
+    <div class="SearchContainer">
+        <input type="text" id="searchInput" placeholder="Search by champion name" onkeydown="if (event.keyCode == 13) searchChampions()">
+        <button onclick="searchChampions()">Search</button>
+    </div>
+
     <div class="CardContainer">
         @foreach (var item in Model.OrderBy(t => t.Name))
         {
@@ -15,5 +23,24 @@
             </div>
         }
     </div>
+</div>
 
 
+
+<script>
+    function searchChampions() {
+        var input, filter, cards, card, title, i;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        cards = document.getElementsByClassName("card2");
+
+        for (i = 0; i < cards.length; i++) {
+            title = cards[i].getElementsByTagName("h2")[0];
+            if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
+        }
+    }
+</script>

@@ -30,6 +30,14 @@ body {
 /*
 	--------------------------------------------------------------LIST-------------------------------------------------------------------
 */
+
+.listCard {
+	display: grid;
+	grid-template-rows: auto auto;
+	justify-items: center;
+	align-items: center;
+}
+
 .CardContainer {
 	width: 100%;
 	height: 100%;
