@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Diagnostics;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using RAPC9Y_SOF_2023241.MVC.Data;
 using RAPC9Y_SOF_2023241.MVC.Helper;
@@ -20,6 +21,7 @@ namespace RAPC9Y_SOF_2023241.MVC.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Create()
         {
@@ -49,6 +51,7 @@ namespace RAPC9Y_SOF_2023241.MVC.Controllers
             return View(_repo.Read(id));
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Update(string id)
         {
