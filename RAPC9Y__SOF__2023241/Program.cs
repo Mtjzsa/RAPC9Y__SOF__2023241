@@ -9,13 +9,13 @@ using RAPC9Y_SOF_2023241.MVC.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var connectionString = builder.Configuration.GetConnectionString("AzureConnection");
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddTransient<ILoLRepository, LoLRepository>();
 builder.Services.AddDbContext<LoLDbContext>(opt =>
 {
     opt
-   .UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=League_Db;Trusted_Connection=True;MultipleActiveResultSets=true")
+   .UseSqlServer(connectionString)
    .UseLazyLoadingProxies();
 });
 
