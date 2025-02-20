@@ -14,14 +14,14 @@ namespace RAPC9Y__SOF__2023241.Helper
                 Port = 587,
                 UseDefaultCredentials = false,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
-                Credentials = new NetworkCredential("mate.jozsa03@gmail.com", "vasember2003"),
+                Credentials = new NetworkCredential("", ""),
                 TargetName = "STARTTLS/smtp.office365.com",
                 EnableSsl = true
             })
             {
                 MailMessage message = new MailMessage()
                 {
-                    From = new MailAddress("mate.jozsa03@gmail.com"),
+                    From = new MailAddress(""),
                     Subject = subject,
                     IsBodyHtml = true,
                     Body = htmlMessage,
